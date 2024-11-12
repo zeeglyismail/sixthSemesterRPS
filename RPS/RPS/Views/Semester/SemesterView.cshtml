@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "SemesterView";
+}
+<div align="center">
+    <h2>Semester View</h2>
+
+    <div class="mb-3">
+        <label class="form-label" style="font-size:larger">Semester No: </label>
+        <input type="text" class="form-control" id="SemID" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="font-size:larger">First Subject: </label>
+        <input type="text" class="form-control" id="SubID1" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="font-size:larger">Second Subject: </label>
+        <input type="text" class="form-control" id="SubID2" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="font-size:larger">Third Subject: </label>
+        <input type="text" class="form-control" id="SubID3" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="font-size:larger">Fourth Subject: </label>
+        <input type="text" class="form-control" id="SubID4" autocomplete="off">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="font-size:larger">Fifth Subject: </label>
+        <input type="text" class="form-control" id="SubID5" autocomplete="off">
+    </div>
+
+    <div class="mb-3" style="margin-top:10px">
+        <button type="button" class="btn btn-primary" onclick="Insert()">Submit</button>
+        <button type="button" id="UpdateId" class="btn btn-primary" onclick="Update()">Update</button>
+    </div>
+
+
+    <div style="width: 1700px;margin-top:100px">
+        <table id="tblStudent" class="table table-bordered table-condensed table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                    <th>Semester No.</th>
+                    <th>First Subject</th>
+                    <th>Second Subject</th>
+                    <th>Third Subject</th>
+                    <th>Fourth Subject</th>
+                    <th>Fifth Subject</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/SemesterJs/Semester.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

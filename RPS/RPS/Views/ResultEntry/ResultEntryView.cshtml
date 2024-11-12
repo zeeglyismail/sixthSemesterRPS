@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "ResultEntryView";
+}
+
+
+<input type="text" id="ResultID" style="display:none">
+
+<div align="center">
+    <h2>Result Entry Here!!</h2>
+
+    <label for="RegNo">RegNo:</label>
+    <select name="RegNo" id="RegNo" onchange="StDataBind()">
+        @*Js Theke Ashbe*@
+    </select>
+
+    <label for="StudentName">Student Name:</label>
+    <input type="text" id="StudentName" readonly />
+
+    <label for="DepartmentName">Department Name:</label>
+    <input type="text" id="DepartmentName" readonly />
+
+
+    <label for="SemID">Semester:</label>
+    <select name="SemID" id="SemID" onchange="loadSubjects()">
+        @*Js Theke Ashbe*@
+    </select>
+</div>
+
+<div align="center">
+    <label for="SubName">Subject Name:</label>
+    <select name="SubName" id="SubName">
+        <option value="Null">Select a Semester First</option>
+        @*Js Theke Ashbe*@
+    </select>
+
+    <label for="ExamTypeName">Exam Name:</label>
+    <input type="text" id="ExamTypeName" readonly style="display:none" />
+    <select name="ExamType" id="ExamTypeID" onchange="ETBind()">
+        @*Js Theke Ashbe*@
+    </select>
+</div>
+
+<div align="center">
+        <label for="TotalMarks">Total Marks:</label>
+        <input type="text" id="TotalMarks" readonly />
+
+        <label for ="ObtainedMarks">Obtained Marks</label>
+        <input type="text" id="ObtainedMarks" />
+</div>
+
+    <div align="center">
+        <div class="mb-3" style="margin-top:10px">
+            <button type="button" class="btn btn-primary" onclick="Insert()">Submit</button>
+            <button type="button" id="UpdateId" class="btn btn-primary" onclick="Update()">Update</button>
+        </div>
+    </div>
+
+    <div align="center">
+        <div style="width: 1500px;margin-top:100px">
+            <table id="tblStudent" class="table table-bordered table-condensed table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        <th>ResultID</th>
+                        <th>RegNo</th>
+                        <th>Student Name</th>
+                        <th>Department Name</th>
+                        <th>Semester</th>
+                        <th>Subject Name</th>
+                        <th>Exam Name</th>
+                        <th>Total Marks</th>
+                        <th>Obtained Marks</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/Result/Result.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

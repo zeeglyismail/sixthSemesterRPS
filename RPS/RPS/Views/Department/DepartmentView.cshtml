@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Department List";
+}
+<div align="center">
+
+    <h2>Welcome to Department List!!!</h2>
+
+    <form>
+
+        <input type="text" class="form-control" id="DeptID" style="display:none">
+        <div class="mb-3">
+            <label class="form-label" style="font-size:larger">Department Name</label>
+            <input type="text" class="form-control" id="DeptName" autocomplete="off">
+        </div>
+
+        <div class="mb-3" style="margin-top:10px">
+            <button type="button" class="btn btn-primary" onclick="Insert()">Submit</button>
+            <button type="button" id="UpdateId" class="btn btn-primary" onclick="Update()">Update</button>
+        </div>
+
+        <div style="width: 500px;margin-top:10px">
+            <table id="tblInfo" class="table table-bordered table-condensed table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Edit</th>
+                        <th>Void</th>
+                        <th>Department ID</th>
+                        <th>Department Name</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+    </form>
+
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/DepartmentJs/Department.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
